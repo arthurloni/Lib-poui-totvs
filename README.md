@@ -11,6 +11,4 @@ Os projetos são desenvolvidos utilizando:
 - **CSS**
 - **PO-UI**
 
-O foco é desenvolver interfaces mais modernas, intuitivas e eficientes, buscando **otimizar processos dentro do Protheus**, melhorar a experiência do usuário e aprimorar a apresentação visual das rotinas.
-
-Além disso, os projetos têm como objetivo explorar boas práticas de desenvolvimento frontend, organização de código e **melhoria de performance** das aplicações.
+Foco em aprendizagem e utilização de mais recursos referente ao desenvolvimento, fugindo da tradição de (ADVPL x TLPP), os projetos vão ser baseados em problemas já visto e ajustado, porém com a utilização de ferramentas da modalidade.
