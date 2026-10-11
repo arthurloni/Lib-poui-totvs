@@ -1,25 +1,27 @@
 # <img width="43" height="38" alt="image" src="https://github.com/user-attachments/assets/e4b205de-9efd-495d-9c14-66c953d2e7ef" /> Framework - Angular - (🇧🇷)
 
-##### *WEBSITES - DOCUMENTAÇÕES - FORUMS*
+##### *REFERÊNCIAS - Documentações, Forums, Blogs...*
 `Utilização de I.A (Claude, Gemini, Chatgpt) -> (Material escrito na mão, uso de I.A para pesquisa, estudos, correção ortográfica é formatação da documentação para facilitar a agilizar de forma prática a criação e os estudos.)`
 
-1 - https://angular.dev/
+1 - https://nodejs.org/pt-br/download
 
 2 - https://angular.dev/installation
 
-3 - https://angular.dev/style-guide
+3 - https://po-ui.io/guides/getting-started
 
-4 - https://feature-sliced.design/
+4 - https://tdn.totvs.com/pages/releaseview.action?pageId=1042925484
 
-5 - https://dev.to/godoi/como-estruturar-sua-aplicacao-angular-26pg
+5 - https://feature-sliced.design/
 
-6 - https://po-ui.io/guides/getting-started
+6 - https://dev.to/godoi/como-estruturar-sua-aplicacao-angular-26pg
 
-7 - https://angular.dev/guide/routing/rendering-strategies
+7 - https://angular.dev/style-guide
 
-8 - https://seo.london/pt/seo-angular/
+8 - https://angular.dev/guide/routing/rendering-strategies
 
-9 - https://tdn.totvs.com/pages/releaseview.action?pageId=1042925484
+9 - https://seo.london/pt/seo-angular/
+
+10 - https://blog.formacao.dev/o-que-e-local-storage/
 
 #### Observação
 *Documentações acima referente ao conteudo abaixo.*
@@ -74,11 +76,9 @@ npm -v
 ng version
 ```
 
-*( O PO UI acompanha uma versão específica do Angular. Em 11/10/2026 o guia pedia o Angular 21, mesmo o Angular 22 já existindo. Antes de instalar, conferir o guia: https://po-ui.io/guides/getting-started )*
+*( O PO UI acompanha uma versão específica do Angular. Em 11/10/2026 o guia pedia o Angular 21, mesmo o Angular 22 já existindo. Antes de instalar, checar o guia na documentação do POUI acima.)*
 
 #### 2.1 - Instalando o Node.js
-
-Download: https://nodejs.org/pt-br/download
 
 ```bash
 node -v
@@ -111,7 +111,7 @@ Perguntas da instalação:
 | Do you want to enable Server-Side Rendering (SSR) and Static Site Generation (SSG/Prerendering)? | `n` |
 | Which AI tools should Angular integrate with? | `None` |
 
-*( SSR = n, porque o PO UI lê o `localStorage` ao iniciar e no servidor ele não existe, gerando o erro `localStorage is not defined`. Sistemas internos também não precisam de SEO. )*
+*( SSR = n, porque o PO UI lê o `localStorage` ao iniciar e no servidor ele não existe, gerando o erro `localStorage is not defined`. Sistemas internos também não precisam de SEO. Para entender melhor oque e o localStorage acesse o */blog.formacao.dev*, presente acima nas referências.)*
 
 Entrar na raiz do projeto:
 
