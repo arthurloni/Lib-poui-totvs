@@ -17,5 +17,6 @@ export class App {
   readonly menus: Array<PoMenuItem> = [
     { label: 'Home', link: '/home' },
     { label: 'Clientes', link: '/clientes' },
+    { label: 'Produtos', link: '/produtos' },
   ];
 }
