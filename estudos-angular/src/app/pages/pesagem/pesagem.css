@@ -1,0 +1,33 @@
+.titulo-faturamento {
+  margin: 0 0 16px;
+}
+
+/* Linha "rótulo ........ valor" dos totalizadores */
+.totalizador {
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+  gap: 16px;
+  padding: 4px 0;
+}
+
+.totalizador strong {
+  font-size: 1.125rem;
+}
+
+/* Os fallbacks (#...) valem caso a variável do tema não exista */
+.valor-azul {
+  color: var(--color-action-default, #0c6a9c);
+}
+
+.valor-verde {
+  color: var(--color-feedback-positive-base, #1a7f37);
+}
+
+/* Botão "Gerar PIX" à esquerda e total à direita */
+.rodape-pagamento {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+}

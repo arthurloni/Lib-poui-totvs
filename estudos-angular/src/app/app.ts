@@ -18,5 +18,6 @@ export class App {
     { label: 'Home', link: '/home' },
     { label: 'Clientes', link: '/clientes' },
     { label: 'Produtos', link: '/produtos' },
+    { label: 'Pesagem', link: '/pesagem' },
   ];
 }

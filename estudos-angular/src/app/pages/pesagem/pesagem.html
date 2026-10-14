@@ -1,0 +1,112 @@
+<po-page-default p-title="Pesagem">
+  <po-button p-label="Abrir tela de Pesagem" p-kind="primary" (p-click)="abrir()"></po-button>
+</po-page-default>
+
+<po-modal
+  p-title="Pesagem"
+  p-size="xl"
+  [p-click-out]="false"
+  [p-primary-action]="acaoConfirmar"
+  [p-secondary-action]="acaoCancelar"
+>
+  <h3 class="po-font-subtitle titulo-faturamento">Dados do Faturamento:</h3>
+
+  <!-- LINHA 1: TICKET (esquerda) + CLIENTE (direita) -->
+  <div class="po-row">
+    <div class="po-md-6 po-sm-12">
+      <po-widget p-title="Ticket">
+        <div class="po-row">
+          <po-info class="po-md-12" p-label="Ticket" [p-value]="ticket.numero" [p-orientation]="horizontal"></po-info>
+          <po-info class="po-md-12" p-label="Produto" [p-value]="ticket.produto" [p-orientation]="horizontal"></po-info>
+          <po-info class="po-md-12" p-label="Qtd (TL)" [p-value]="ticket.quantidade" [p-orientation]="horizontal"></po-info>
+          <po-info class="po-md-12" p-label="Placa" [p-value]="ticket.placa" [p-orientation]="horizontal"></po-info>
+        </div>
+      </po-widget>
+    </div>
+
+    <div class="po-md-6 po-sm-12">
+      <po-widget p-title="Cliente">
+        <div class="po-row">
+          <po-info class="po-md-12" p-label="Cliente" [p-value]="cliente.nome" [p-orientation]="horizontal"></po-info>
+          <po-info class="po-md-12" p-label="CNPJ / CPF" [p-value]="cliente.documento" [p-orientation]="horizontal"></po-info>
+          <po-info class="po-md-12" p-label="Contrato" [p-value]="cliente.contrato" [p-orientation]="horizontal"></po-info>
+        </div>
+      </po-widget>
+    </div>
+  </div>
+
+  <!-- LINHA 2: DANFE (esquerda) + CONTRATOS EM ABERTO e TOTALIZADORES (direita) -->
+  <div class="po-row">
+    <div class="po-md-6 po-sm-12">
+      <po-widget p-title="DANFE">
+        <div class="po-row">
+          <po-select
+            class="po-md-6"
+            name="enviarWhatsApp"
+            p-label="Enviar WhatsApp"
+            [p-options]="opcoesSimNao"
+            [ngModel]="enviarWhatsApp" (ngModelChange)="enviarWhatsApp = $event"
+          ></po-select>
+          <po-input class="po-md-6" name="telefone" p-label="Telefone" p-mask="(99) 9 9999-9999" [(ngModel)]="telefone"></po-input>
+
+          <po-select
+            class="po-md-6"
+            name="imprimirDanfe"
+            p-label="Imprimir Danfe"
+            [p-options]="opcoesSimNao"
+            [ngModel]="imprimirDanfe" (ngModelChange)="imprimirDanfe = $event"
+          ></po-select>
+          <po-select class="po-md-6" name="vias" p-label="Vias" [p-options]="opcoesVias" [ngModel]="vias" (ngModelChange)="vias = $event"></po-select>
+
+          <po-select
+            class="po-md-6"
+            name="imprimirRecibo"
+            p-label="Imprimir Recibo"
+            [p-options]="opcoesSimNao"
+            [ngModel]="imprimirRecibo" (ngModelChange)="imprimirRecibo = $event"
+          ></po-select>
+        </div>
+      </po-widget>
+    </div>
+
+    <div class="po-md-6 po-sm-12">
+      <po-widget p-title="Contratos em Aberto">
+        <po-table
+          [p-columns]="colunasContratos"
+          [p-items]="contratos"
+          [p-selectable]="true"
+          [p-hide-select-all]="true"
+          [p-height]="150"
+        ></po-table>
+      </po-widget>
+
+      <po-widget p-title="Totalizadores">
+        <div class="totalizador">
+          <span>Saldo Total Selecionado (TL):</span>
+          <strong class="valor-azul">{{ saldoTotalSelecionado }}</strong>
+        </div>
+        <div class="totalizador">
+          <span>Saldo Ticket:</span>
+          <strong class="valor-verde">{{ saldoTicket }}</strong>
+        </div>
+      </po-widget>
+    </div>
+  </div>
+
+  <!-- LINHA 3: FORMA DE PAGAMENTO (largura total) -->
+  <div class="po-row">
+    <div class="po-md-12">
+      <po-widget p-title="Forma de Pagamento">
+        <po-table [p-columns]="colunasPagamento" [p-items]="pagamentos" [p-height]="170"></po-table>
+
+        <div class="rodape-pagamento">
+          <po-button p-label="Gerar PIX" (p-click)="gerarPix()"></po-button>
+          <div class="totalizador">
+            <span>Total Forma de Pagamento (R$):</span>
+            <strong class="valor-verde">{{ totalFormaPagamento }}</strong>
+          </div>
+        </div>
+      </po-widget>
+    </div>
+  </div>
+</po-modal>
