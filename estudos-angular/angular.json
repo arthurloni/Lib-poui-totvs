@@ -25,13 +25,7 @@
               }
             ],
             "styles": [
-              "node_modules/@po-ui/style/css/po-theme-core.min.css",
-              "node_modules/@totvs/po-theme/css/po-theme-default-variables.min.css",
-              "node_modules/@totvs/po-theme/css/po-theme-default.min.css",
               "src/styles.css"
-            ],
-            "polyfills": [
-              "zone.js"
             ]
           },
           "configurations": {
@@ -39,8 +33,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "3MB",
-                  "maximumError": "4MB"
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
                 },
                 {
                   "type": "anyComponentStyle",
