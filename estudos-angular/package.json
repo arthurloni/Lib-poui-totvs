@@ -34,7 +34,9 @@
     "@po-ui/ng-components": "^21.34.0",
     "@po-ui/ng-templates": "^21.34.0",
     "@totvs/po-theme": "^21.34.0",
+    "@totvs/protheus-lib-core": "^21.1.2",
     "rxjs": "~7.8.1",
+    "subsink": "^1.0.2",
     "tslib": "^2.6.2",
     "zone.js": "~0.15.0"
   },
